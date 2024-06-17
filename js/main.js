@@ -52,6 +52,14 @@ document.addEventListener('click', e => {
         barsHeader.classList.add('bars-header-active');
         iconX.classList.add('icon-x-header-active');
         iconX.classList.remove('animasi-icon-x-list-header');
+    };
+
+    // event bars header 
+    if (!e.target.classList.contains('bars-header-i') && !e.target.classList.contains('list-header') && !e.target.classList.contains('a-list-header')) {
+        listHeader.classList.remove('list-header-active');
+        barsHeader.classList.add('bars-header-active');
+        iconX.classList.add('icon-x-header-active');
+        iconX.classList.remove('animasi-icon-x-list-header');
     }
 
 });
