@@ -1,5 +1,53 @@
+// class
+class Active {
+    constructor(area, even) {
+        this.area = area;
+        this.even = even;
+    }
+
+    // event klik active
+    eventKlikActive(elemenKlik, elemenRubah, elemenAktif, elemenHidden) {
+        this.area.addEventListener(`${this.even}`, e => {
+            if (e.target.classList.contains(`${elemenKlik}`)) {
+                elemenRubah.classList.add(`${elemenAktif}`);
+                elemenRubah.classList.remove(`${elemenHidden}`);
+            };
+        });
+    };
+
+    eventKlikHidden(elemenRubah, elemenAktif, elementHidden, ...elemenKlik) {
+        this.area.addEventListener(`${this.even}`, e => {
+            let shouldHide = true;
+            for (const element of elemenKlik) {
+                if (e.target.classList.contains(element)) {
+                    shouldHide = false;
+                    break;
+                };
+            };
+            if (shouldHide) {
+                elemenRubah.classList.remove(elemenAktif);
+                elemenRubah.classList.add(elementHidden);
+            }
+        });
+    };
+};
+
 // input header
 const inputSearchHeader = document.querySelector('.input-search-header');
+const inputSearch = new Active(document, 'click');
+inputSearch.eventKlikActive('icon-search-header', inputSearchHeader, 'input-search-header-active', 'input-search-header-hiden');
+
+// const inputSearchHidden = new Active(document, 'click');
+inputSearch.eventKlikHidden(inputSearchHeader, 'input-search-header-active', 'input-search-header-hiden', 'icon-search-header', 'input-search-header');
+
+
+
+
+
+
+
+
+
 // aksi section 1
 const aksiSectionOne = document.querySelectorAll('.a-aksi-section-1');
 // list header
@@ -7,17 +55,7 @@ const listHeader = document.querySelector('.list-header');
 // icon X list header
 const iconX = document.querySelector('.icon-x-list-header');
 document.addEventListener('click', e => {
-    // event input header
-    if (e.target.classList.contains('icon-search-header')) {
-        inputSearchHeader.classList.add('input-search-header-active');
-        inputSearchHeader.classList.remove('input-search-header-hiden');
-    };
-    // input input header
-    if (!e.target.classList.contains('icon-search-header') && !e.target.classList.contains('input-search-header')) {
-        inputSearchHeader.classList.remove('input-search-header-active');
-        inputSearchHeader.classList.add('input-search-header-hiden');
-    };
-    // event aksi section 1
+
     if (e.target.classList.contains('a-aksi-section-1')) {
 
         aksiSectionOne.forEach(element => {
