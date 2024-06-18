@@ -103,10 +103,6 @@ body {
 }
 
 
-.container-header .bars-header.bars-header-active {
-    transform: scale(1);
-}
-
 
 
 /* TITLE */
@@ -260,7 +256,7 @@ body {
 /* AKSI */
 .section-1 .text-section-1 .aksi-section-1 {
     margin-top: 8%;
-    margin-left: -6%;
+    margin-left: -5.5%;
     width: 80%;
     display: flex;
     justify-content: center;
@@ -303,9 +299,106 @@ body {
     width: 70%;
 }
 
+/* SECTION 2 */
+
+.section-2 {
+    width: 100%;
+    height: 86vh;
+    background-image: linear-gradient(to right, var(--blue-custom), var(--cyan-custom));
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* TITLE IMG */
+.section-2 .container-img-title-section-2 {
+    margin-right: 10%;
+    margin-left: 4%;
+}
+
+/* SECTION IMG */
+.section-2 .container-img-title-section-2 .img-section-2 {
+    width: 120%;
+    padding-right: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+}
+
+.section-2 .container-img-title-section-2 .img-section-2 img{
+    width: 120%;
+    margin-left: 40%;
+}
+
+/* TITLE IMG */
+.section-2 .container-img-title-section-2 .title-section-2 {
+    margin-left: 6%;
+    width: 120%;
+}
+
+.section-2 .container-img-title-section-2 .title-section-2 h2 span {
+    color: var(--cyan-custom);
+}
+
+.section-2 .container-img-title-section-2 .title-section-2 h2 {
+    color: white;
+    font-size: 2.5rem;
+}
+
+/* TEXT SECTION */
+.section-2 .text-section-2 {
+    margin-left: 13%;
+    margin-right: 6%;
+    width: 90%;
+}
+
+.section-2 .text-section-2 .p-1-text-section-2 {
+    color: white;
+    margin-bottom: 4%;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.section-2 .text-section-2 .p-2-text-section-2 {
+    color: white;
+    font-size: 1.2rem;
+    padding-left: 6%;
+    margin-bottom: 3%;
+    text-align: justify;
+    position: relative;
+}
+
+.section-2 .text-section-2 .p-2-text-section-2::before {
+    content: '';
+    width: 10%;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+    transform: rotate(90deg);
+    left: -4%;
+    bottom: 50%;
+}
+
+.section-2 .text-section-2 ul {
+    margin-left: 4%;
+}
+
+.section-2 .text-section-2 ul li {
+    color: white;
+    padding-left: 2%;
+    padding-bottom: 1.2%;
+    font-size: 1.1rem;
+}
+
+
+
+
 /* PHONE */
 
 @media screen and (max-width: 480px) {
+    /* SECTION 1 */
     /* LIST HEADER */
     .container-header .header .list-header {
         width: 250px;
@@ -447,6 +540,11 @@ body {
     /* thumbnail section 1 */
     .section-1 .thumbnail-section-1 img {
         width: 100%;
+    }
+
+    /* bars */
+    .container-header .bars-header {
+        transform: scale(1);
     }
 }
 

@@ -32,20 +32,12 @@ class Active {
     };
 };
 
-// input header
+// input header active
 const inputSearchHeader = document.querySelector('.input-search-header');
 const inputSearch = new Active(document, 'click');
 inputSearch.eventKlikActive('icon-search-header', inputSearchHeader, 'input-search-header-active', 'input-search-header-hiden');
-
-// const inputSearchHidden = new Active(document, 'click');
+// input header hidden
 inputSearch.eventKlikHidden(inputSearchHeader, 'input-search-header-active', 'input-search-header-hiden', 'icon-search-header', 'input-search-header');
-
-
-
-
-
-
-
 
 
 // aksi section 1
@@ -55,9 +47,7 @@ const listHeader = document.querySelector('.list-header');
 // icon X list header
 const iconX = document.querySelector('.icon-x-list-header');
 document.addEventListener('click', e => {
-
     if (e.target.classList.contains('a-aksi-section-1')) {
-
         aksiSectionOne.forEach(element => {
             element.classList.remove('a-aksi-section-1-active');
             element.classList.add('a-aksi-section-1-hidden')
@@ -104,13 +94,5 @@ document.addEventListener('click', e => {
 
 // bars header
 const barsHeader = document.querySelector('.bars-header');
-// media hp
-let mediaHp = window.matchMedia("(max-width: 450px)")
 
-mediaHp.addEventListener("change", () => {
-    if (mediaHp.matches) {
-        barsHeader.classList.add('bars-header-active');
-    } else {
-        barsHeader.classList.remove('bars-header-active');
-    }
-})
+
