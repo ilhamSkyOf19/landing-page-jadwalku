@@ -4,6 +4,7 @@
     --blue-custom:  #090979;
     --roboto: "Roboto", sans-serif;
     --luckiestGuy: "Luckiest Guy", cursive;
+    --popins: "Poppins", sans-serif;
 }
 
 
@@ -16,7 +17,7 @@
 }
 
 body {
-    font-family: var(--roboto);
+    font-family: var(--popins);
     box-sizing: border-box;
     font-weight: 400;
 }
@@ -358,13 +359,13 @@ body {
 .section-2 .text-section-2 .p-1-text-section-2 {
     color: white;
     margin-bottom: 4%;
-    font-size: 1.2rem;
+    font-size: .9rem;
     text-align: justify;
 }
 
 .section-2 .text-section-2 .p-2-text-section-2 {
     color: white;
-    font-size: 1.2rem;
+    font-size: .9rem;
     padding-left: 6%;
     margin-bottom: 3%;
     text-align: justify;
@@ -405,10 +406,100 @@ body {
     overflow: hidden;
 }
 
+.section-3 span {
+    color: var(--cyan-custom);
+}
+
+
 .section-3 .img-section-3 img {
     width: 70%;
 }
 
+
+
+/* section text 1  and section text 2*/
+.section-3 .container-text-1 {
+    width: 30%;
+    padding-left: 16%;
+    text-align: justify;
+}
+
+.section-3 .container-text-2 {
+    width: 30%;
+    padding-right: 6%;
+    padding-left: 3%;
+    text-align: justify;
+}
+
+
+/* text 1 */
+.section-3 .container-text-2 .container-text-2-text-1-section-3,
+.section-3 .container-text-1 .text-1-section-3 {
+    width: 90%;
+}
+
+/* h3 text 1 */
+.section-3 .container-text-2 .container-text-2-text-1-section-3 h2, 
+.section-3 .container-text-1 .text-1-section-3 h2 {
+    color: white;
+    width: 40%;
+    font-size: 2rem;
+}
+/* p 1 text 1 */
+.section-3 .container-text-2 .container-text-2-text-1-section-3 .container-text-2-p-1-text-1-section-3,
+.section-3 .container-text-1 .text-1-section-3 .p-1-text-1-section-3 {
+    color: var(--cyan-custom);
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 4%;
+}
+.section-3 .container-text-2 .container-text-2-text-1-section-3 .container-text-2-p-1-text-1-section-3{
+    color: var(--blue-custom);
+}
+
+/* p 2 text 1 */
+.section-3 .container-text-2 .container-text-2-text-1-section-3 .container-text-2-p-2-text-1-section-3,
+.section-3 .container-text-1 .text-1-section-3 .p-2-text-1-section-3 {
+    color: white;
+    width: 80%;
+    margin-top: 4%;
+}
+
+/* text 2 */
+.section-3 .container-text-2 .container-text-2-text-2-section-3,
+.section-3 .container-text-1 .text-2-section-3 {
+    width: 90%;
+    margin-top: 10%;
+}
+
+/* h2 text 2 */
+.section-3 .container-text-2 .container-text-2-text-2-section-3 h2,
+.section-3 .container-text-1 .text-2-section-3 h2 {
+    color: white;
+    width: 40%;
+    font-size: 2rem;
+}
+
+/* p 1 text 2 */
+.section-3 .container-text-2 .container-text-2-text-2-section-3 .container-text-2-p-1-text-2-section-3,
+.section-3 .container-text-1 .text-2-section-3 .p-1-text-2-section-3 {
+    color: var(--cyan-custom);
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 4%;
+}
+.section-3 .container-text-2 .container-text-2-text-2-section-3 .container-text-2-p-1-text-2-section-3 {
+    color: var(--blue-custom);
+}
+
+
+/* p 2 text 1 */
+.section-3 .container-text-2 .container-text-2-text-2-section-3 .container-text-2-p-2-text-2-section-3,
+.section-3 .container-text-1 .text-2-section-3 .p-2-text-2-section-3 {
+    color: white;
+    width: 80%;
+    margin-top: 4%;
+}
 
 
 
@@ -605,6 +696,35 @@ body {
     .section-2 .text-section-2 .p-2-text-section-2::before {
         width: 30%;
         left: -14%;
+    }
+
+    /* SECTION 3 */
+    .section-3 {
+        height: auto;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 10%;
+    }
+    .section-3 .container-text-1 {
+        order: 2;
+    }
+
+    .section-3 .img-section-3 {
+        order: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section-3 .container-text-2 {
+        order: 3;
+    }
+
+    /* img section 3 */
+    .section-3 .img-section-3 img {
+        width: 70%;
     }
     
 
