@@ -185,7 +185,7 @@ body {
     border-radius: 2px;
     color: white;
     font-size: 0.8rem;
-    background-image: linear-gradient(to right, var(--cyan-custom), var(--blue-custom));
+    background-image: linear-gradient(to right, var(--blue-custom), var(--cyan-custom));
 }
 
 .container-search-unduh .unduh-header:hover {
@@ -376,7 +376,7 @@ body {
     content: '';
     width: 10%;
     height: 2px;
-    background-color: white;
+    background-color: var(--cyan-custom);
     position: absolute;
     transform: rotate(90deg);
     left: -4%;
@@ -392,6 +392,10 @@ body {
     padding-left: 2%;
     padding-bottom: 1.2%;
     font-size: 1.1rem;
+}
+
+.section-2 .text-section-2 ul li::marker {
+    color: var(--cyan-custom);
 }
 
 /* SECTION 3 */
@@ -502,6 +506,217 @@ body {
 }
 
 
+/* SECTION 4 */
+.section-4 {
+    width: 100%;
+    height: 86vh;
+    background-image: linear-gradient(to right, var(--blue-custom), var(--cyan-custom));
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* text 1 section 4 */
+.section-4 .text-section-4 {
+    width: 50%;
+    padding-left: 5%;
+}
+
+.section-4 .text-section-4 .text-1-section-4 h1{
+    color: white;
+    width: 90%;
+    font-size: 3rem;
+    margin-top: -5%;
+}
+
+.section-4 .text-section-4 .text-1-section-4 h1 span {
+    color: var(--cyan-custom);
+}
+
+.section-4 .text-section-4 .text-1-section-4 .p-1-text-1-section-4 {
+    color: white;
+    font-size: .7rem;
+    margin-top: -1%;
+}
+
+.section-4 .text-section-4 .text-1-section-4 .p-2-text-1-section-4 {
+    color: white;
+    width: 60%;
+    margin-top: 4%;
+}
+
+/* text 2 section 4*/
+.section-4 .text-section-4 .text-2-section-4 {
+    margin-top: 3%;
+    padding-left: 7%;
+}
+
+
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon,
+.section-4 .text-section-4 .text-2-section-4 .text-2-email,
+.section-4 .text-section-4 .text-2-section-4 .text-2-website {
+    margin-bottom: 3%;
+}
+
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon h3,
+.section-4 .text-section-4 .text-2-section-4 .text-2-email h3,
+.section-4 .text-section-4 .text-2-section-4 .text-2-website h3 {
+    color: var(--cyan-custom);
+    font-size: 1.2rem;
+}
+
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon p,
+.section-4 .text-section-4 .text-2-section-4 .text-2-email p,
+.section-4 .text-section-4 .text-2-section-4 .text-2-website a {
+    color: white;
+    font-size: .7rem;
+}
+
+
+/* before */
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon::before {
+    content: ".";
+    font-size: 7rem;
+    position: absolute;
+    margin-top: -7.9%;
+    margin-left: -3%;
+    color: var(--cyan-custom);
+}
+
+/* after */
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon::after {
+    content: '';
+    width: 5%;
+    height: 2px;
+    margin-left: -4.5%;
+    background-color: var(--cyan-custom);
+    position: absolute;
+    transform: rotate(90deg);
+}
+/* before */
+.section-4 .text-section-4 .text-2-section-4 .text-2-email::before {
+    content: ".";
+    font-size: 7rem;
+    position: absolute;
+    margin-top: -7.9%;
+    margin-left: -3%;
+    color: var(--cyan-custom);
+}
+/* after */
+.section-4 .text-section-4 .text-2-section-4 .text-2-email::after {
+    content: '';
+    width: 5%;
+    height: 2px;
+    margin-left: -4.5%;
+    background-color: var(--cyan-custom);
+    position: absolute;
+    transform: rotate(90deg);
+}
+/* before */
+.section-4 .text-section-4 .text-2-section-4 .text-2-website::before {
+    content: ".";
+    font-size: 7rem;
+    position: absolute;
+    margin-top: -7.9%;
+    margin-left: -3%;
+    color: var(--cyan-custom);
+}
+
+
+/* input section 4 */
+.section-4 .input-section-4 {
+    width: 50%;
+    padding-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section-4 .input-section-4 .input-email-section-4,
+.section-4 .input-section-4 .input-nama-section-4,
+.section-4 .input-section-4 .input-pesan-section-4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-top: 2%;
+}
+
+.section-4 .input-section-4 .input-nama-section-4 label,
+.section-4 .input-section-4 .input-email-section-4 label,
+.section-4 .input-section-4 .input-pesan-section-4 label{
+    color: white;
+    font-size: .9rem;
+    margin-bottom: 2%;
+}
+
+.section-4 .input-section-4 .input-nama-section-4 input,
+.section-4 .input-section-4 .input-email-section-4 input {
+    width: 160%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    padding-left: 13%;
+    padding-right: 13%;
+    outline: none;
+}
+
+
+/* text area */
+.section-4 .input-section-4 .input-pesan-section-4 textarea {
+    width: 163%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+    padding-left: 13%;
+    padding-right: 13%;
+    outline: none;
+}
+.section-4 .input-section-4 .input-nama-section-4 input::placeholder,
+.section-4 .input-section-4 .input-email-section-4 input::placeholder,
+.section-4 .input-section-4 .input-pesan-section-4 textarea::placeholder {
+    font-family: var(--popins);
+}
+
+
+
+/* button */
+.section-4 .button-section-4  {
+    margin-top: 3%;
+    width: 54.5%;
+    margin-left: 25.7%;
+}
+
+.section-4 .button-section-4 button {
+    border: none;
+    width: 100%;
+    padding: 4% 10% 4% 10%;
+    background-image: linear-gradient(to right, var(--cyan-custom), var(--blue-custom));
+    color: white;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.section-4 .button-section-4 button:hover {
+    transform: scale(0.8);
+}
+
+/* link section 4 */
+.section-4 .a-section-4 {
+    margin-left: 60%;
+    margin-top: 2%;
+}
+.section-4 .a-section-4 a {
+    color: white;
+    font-size: .7rem;
+    text-decoration: underline;
+    color: var(--blue-custom);
+}
+
+
+
+
+
 
 /* PHONE */
 
@@ -603,11 +818,12 @@ body {
     .section-1 .text-section-1 .aksi-section-1 {
         margin-left: 0%;
         margin-top: 20%;
-        width: 190%;
+        width: 200%;
     }
 
     .section-1 .text-section-1 .aksi-section-1 .a-aksi-section-1 {
         font-size: .9rem;
+        width: 100%;
     }
 
     /* unduh */
@@ -670,6 +886,8 @@ body {
     }
     .section-2 .container-img-title-section-2 .title-section-2 h2 {
         font-size: 2rem;
+        width: 80%;
+        text-align: center;
     }
     .section-2 .container-img-title-section-2 .title-section-2 {
         display: flex;
@@ -726,7 +944,54 @@ body {
     .section-3 .img-section-3 img {
         width: 70%;
     }
-    
+
+    .section-3 .container-text-1{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        padding-left: 0%;
+        margin-top: 8%;
+    }
+    .section-3 .container-text-2 {
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin-top: 8%;
+        padding-right: -6%;
+    }
+
+    .section-3 .container-text-2 .container-text-2-text-1-section-3 h2,
+    .section-3 .container-text-2 .container-text-2-text-2-section-3 h2,
+    .section-3 .container-text-1 .text-2-section-3 h2,
+    .section-3 .container-text-1 .text-1-section-3 h2{
+        margin-left: 0%;
+        text-align: center;
+        width: 100%;
+    }
+
+    .section-3 .container-text-2 .container-text-2-text-2-section-3 .container-text-2-p-2-text-2-section-3,
+    .section-3 .container-text-2 .container-text-2-text-1-section-3 .container-text-2-p-2-text-1-section-3 {
+        width: 105%;
+    }
+    .section-3 .container-text-1 .text-1-section-3 .p-2-text-1-section-3,
+    .section-3 .container-text-1 .text-2-section-3 .p-2-text-2-section-3{
+        width: 100%;
+    }
+
+    .section-3 .container-text-2 .container-text-2-text-2-section-3 .container-text-2-p-1-text-2-section-3 {
+        color: var(--cyan-custom);
+    }
+    .section-3 .container-text-2 .container-text-2-text-1-section-3 .container-text-2-p-1-text-1-section-3{
+        color: var(--cyan-custom);
+    }
+
+    /* section 4 */
 
 }
 
