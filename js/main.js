@@ -96,3 +96,30 @@ document.addEventListener('click', e => {
 const barsHeader = document.querySelector('.bars-header');
 
 
+// paralax
+
+// saat halaman di refres
+const header = document.getElementById('header');
+const classHeader = document.querySelector('.header');
+const classTitle = document.querySelector('.title-header');
+const classSearchUnduh = document.querySelector('.container-search-unduh');
+const classListHeader = document.querySelector('.list-header');
+const classTextSection1 = document.querySelector('.text-section-1');
+const classThumbnailSection1 = document.querySelector('.thumbnail-section-1');
+
+// load
+window.addEventListener('load', () => {
+    classHeader.classList.add('header-active');
+    classListHeader.classList.add('content-active');
+    classTitle.classList.add('content-active');
+    classSearchUnduh.classList.add('content-active');
+    classTextSection1.classList.add('content-active');
+    classThumbnailSection1.classList.add('content-active');
+});
+
+// scroll 
+window.addEventListener('scroll', () => {
+    let scrolY = window.scrollY; // Mendapatkan posisi scroll
+    classTextSection1.style.transform = `translate( ${scrolY * -0.3 + '%'}, ${scrolY * -0.3 + '%'})`;
+    classThumbnailSection1.style.transform = `translate( ${scrolY * 0.3 + '%'}, ${scrolY * -0.3 + '%'})`;
+});
