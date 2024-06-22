@@ -106,6 +106,7 @@ const classSearchUnduh = document.querySelector('.container-search-unduh');
 const classListHeader = document.querySelector('.list-header');
 const classTextSection1 = document.querySelector('.text-section-1');
 const classThumbnailSection1 = document.querySelector('.thumbnail-section-1');
+const classH2Section2 = document.querySelector('.h-2-title-section-2');
 
 // load
 window.addEventListener('load', () => {
@@ -122,4 +123,10 @@ window.addEventListener('scroll', () => {
     let scrolY = window.scrollY; // Mendapatkan posisi scroll
     classTextSection1.style.transform = `translate( ${scrolY * -0.3 + '%'}, ${scrolY * -0.3 + '%'})`;
     classThumbnailSection1.style.transform = `translate( ${scrolY * 0.3 + '%'}, ${scrolY * -0.3 + '%'})`;
+    // console.log(scrolY);
+    if (scrollY > 258) {
+        classH2Section2.classList.add('content-active');
+    } if (scrolY < 258) {
+        classH2Section2.classList.remove('content-active');
+    }
 });

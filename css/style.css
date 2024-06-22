@@ -81,6 +81,8 @@ body {
     transform: translateY(-100%);
 }
 
+.section-2 .container-img-title-section-2 .img-section-2 .element-img-section-2.content-active,
+.section-2 .container-img-title-section-2 .title-section-2 .h-2-title-section-2.content-active,
 .section-1 .thumbnail-section-1.content-active,
 .section-1 .text-section-1.content-active,
 .container-header .header .container-search-unduh.content-active,
@@ -373,6 +375,7 @@ body {
 .section-2 .container-img-title-section-2 .img-section-2 img{
     width: 120%;
     margin-left: 40%;
+    opacity: 0;
 }
 
 /* TITLE IMG */
@@ -388,6 +391,9 @@ body {
 .section-2 .container-img-title-section-2 .title-section-2 h2 {
     color: white;
     font-size: 2.5rem;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: 2.5s;
 }
 
 /* TEXT SECTION */
