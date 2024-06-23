@@ -76,9 +76,6 @@ body {
     align-items: center;
     margin-left: 7%;
     font-size: 0.9rem;
-    opacity: 0;
-    transition: 2s;
-    transform: translateY(-100%);
 }
 
 .section-3 .container-text-2 .container-text-2-text-2-section-3 h2.content-active,
@@ -103,8 +100,7 @@ body {
 .section-1 .thumbnail-section-1.content-active,
 .section-1 .text-section-1.content-active,
 .container-header .header .container-search-unduh.content-active,
-.container-header .header .title-header.content-active,
-.container-header .header .list-header.content-active {
+.container-header .header .title-header.content-active {
     opacity: 1;
     transform: translateY(0%);
 }
@@ -154,11 +150,6 @@ body {
 
 
 /* TITLE */
-.container-header .title-header {
-    transform: translateY(-100%);
-    transition: 2s;
-    opacity: 0;
-}
 
 .container-header .title-header .h3-title-header {
     font-family: "Mochiy Pop One", sans-serif;
@@ -173,9 +164,6 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-right: 7%;
-    opacity: 0;
-    transition: 2s;
-    transform: translateY(-100%);
 }
 
 
@@ -603,6 +591,17 @@ body {
 .section-4 .text-section-4 {
     width: 50%;
     padding-left: 5%;
+    transform: translate(-20%, 30%);
+    opacity: 0;
+    transition: 1.2s;
+
+}
+
+/* paralax */
+.section-4 .input-section-4.content-active,
+.section-4 .text-section-4.content-active {
+    transform: translate(0);
+    opacity: 1;
 }
 
 .section-4 .text-section-4 .text-1-section-4 h1{
@@ -655,55 +654,29 @@ body {
     font-size: .7rem;
 }
 
-
 /* before */
-.section-4 .text-section-4 .text-2-section-4 .text-2-telepon::before {
-    content: ".";
-    font-size: 7rem;
-    position: absolute;
-    margin-top: -7.9%;
-    margin-left: -3%;
-    color: var(--cyan-custom);
-}
-
-/* after */
-.section-4 .text-section-4 .text-2-section-4 .text-2-telepon::after {
-    content: '';
-    width: 5%;
-    height: 2px;
-    margin-left: -4.5%;
-    background-color: var(--cyan-custom);
-    position: absolute;
-    transform: rotate(90deg);
-}
-/* before */
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon::before,
+.section-4 .text-section-4 .text-2-section-4 .text-2-website::before,
 .section-4 .text-section-4 .text-2-section-4 .text-2-email::before {
     content: ".";
     font-size: 7rem;
     position: absolute;
-    margin-top: -7.9%;
-    margin-left: -3%;
+    margin-top: -15.5%;
+    margin-left: -6%;
     color: var(--cyan-custom);
 }
 /* after */
+.section-4 .text-section-4 .text-2-section-4 .text-2-telepon::after,
 .section-4 .text-section-4 .text-2-section-4 .text-2-email::after {
     content: '';
-    width: 5%;
+    width: 8.5%;
     height: 2px;
-    margin-left: -4.5%;
+    margin-left: -8.3%;
     background-color: var(--cyan-custom);
     position: absolute;
     transform: rotate(90deg);
 }
-/* before */
-.section-4 .text-section-4 .text-2-section-4 .text-2-website::before {
-    content: ".";
-    font-size: 7rem;
-    position: absolute;
-    margin-top: -7.9%;
-    margin-left: -3%;
-    color: var(--cyan-custom);
-}
+
 
 
 /* input section 4 */
@@ -714,6 +687,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transform: translate(20%, 30%);
+    opacity: 0;
+    transition: 1.2s;
 }
 .section-4 .input-section-4 .input-email-section-4,
 .section-4 .input-section-4 .input-nama-section-4,
@@ -791,7 +767,7 @@ body {
     color: white;
     font-size: .7rem;
     text-decoration: underline;
-    color: var(--blue-custom);
+    color: var(--cyan-custom);
 }
 
 
@@ -826,6 +802,7 @@ body {
     /* list header active */
     .container-header .header .list-header.list-header-active {
         left: 0%;
+       
     }
 
     .container-header .header .list-header a{
@@ -958,7 +935,7 @@ body {
     /* SECTION 2 */
     .section-2 {
         flex-direction: column;
-        padding-bottom: 10%;
+        padding-bottom: 40%;
     }
     /* IMG TITLE */
     .section-2 .container-img-title-section-2 {
@@ -1140,7 +1117,7 @@ body {
     .section-4 .input-section-4 .input-pesan-section-4 textarea{
         width: 59%;
         padding-left: 5%;
-        padding-right: 5%;
+        padding-right: 15.5%;
     }
 
     /* button */

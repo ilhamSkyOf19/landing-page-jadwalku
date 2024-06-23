@@ -1,3 +1,5 @@
+// // paralax
+// function Paralax() {}
 // class
 class Active {
     constructor(area, even) {
@@ -66,8 +68,8 @@ document.addEventListener('click', e => {
 
     // event bars header
     if (e.target.classList.contains('bars-header-i')) {
+        console.log('ok');
         listHeader.classList.add('list-header-active');
-        barsHeader.classList.remove('bars-header-active');
         iconX.classList.add('icon-x-list-header-active');
         // event animasi icon x
         if (iconX.classList.contains('icon-x-list-header-active')) {
@@ -97,14 +99,10 @@ const barsHeader = document.querySelector('.bars-header');
 
 
 // paralax
-
 // saat halaman di refres
 // section 2
 const header = document.getElementById('header');
 const classHeader = document.querySelector('.header');
-const classTitle = document.querySelector('.title-header');
-const classSearchUnduh = document.querySelector('.container-search-unduh');
-const classListHeader = document.querySelector('.list-header');
 const classTextSection1 = document.querySelector('.text-section-1');
 const classThumbnailSection1 = document.querySelector('.thumbnail-section-1');
 const classH2Section2 = document.querySelector('.h-2-title-section-2');
@@ -133,12 +131,13 @@ const p2Text2section3Vol2 = document.querySelector('.container-text-2-p-2-text-2
 // img section 3
 const imgSection3 = document.querySelector('.content-img-section-3');
 
+// section 4
+const textSection4 = document.querySelector('.text-section-4');
+const inputSection4 = document.querySelector('.input-section-4');
+
 // load
 window.addEventListener('load', () => {
     classHeader.classList.add('header-active');
-    classListHeader.classList.add('content-active');
-    classTitle.classList.add('content-active');
-    classSearchUnduh.classList.add('content-active');
     classTextSection1.classList.add('content-active');
     classThumbnailSection1.classList.add('content-active');
 });
@@ -168,7 +167,11 @@ window.addEventListener('scroll', () => {
     // section 2
     classTextSection1.style.transform = `translate( ${scrolY * -0.3 + '%'}, ${scrolY * -0.3 + '%'})`;
     classThumbnailSection1.style.transform = `translate( ${scrolY * 0.3 + '%'}, ${scrolY * -0.3 + '%'})`;
-    console.log(scrolY);
+
+    if (window.matchMedia('(max-width: 480px)')) {
+        classTextSection1.style.transform = `translate( ${scrolY * -0.02 + '%'}, ${scrolY * -0.02 + '%'})`;
+        classThumbnailSection1.style.transform = `translate( ${scrolY * 0.02 + '%'}, ${scrolY * -0.02 + '%'})`;
+    }
 
     const section = new Paralax(scrolY);
     // h2
@@ -227,6 +230,12 @@ window.addEventListener('scroll', () => {
     // p2 text 2 vol 2
     section.ParalaxActive(p2Text2section3Vol2, 'content-active', 930);
     section.ParalaxHidden(p2Text2section3Vol2, 'content-active', 930);
-
+    // section 4
+    // text section 4
+    section.ParalaxActive(textSection4, 'content-active', 1200);
+    section.ParalaxHidden(textSection4, 'content-active', 1200);
+    // input section 4
+    section.ParalaxActive(inputSection4, 'content-active', 1200);
+    section.ParalaxHidden(inputSection4, 'content-active', 1200);
 
 });
